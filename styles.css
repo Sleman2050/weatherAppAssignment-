@@ -1,0 +1,39 @@
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #b7a6a6;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.weather-info {
+    margin-top: 20px;
+    margin-left: 33vh;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 250px;
+}
+
+#now {
+
+    margin-right: 450px;
+}
