@@ -1,23 +1,27 @@
 body {
-
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
     background-color: #b7a6a6;
+    margin: 0; 
 }
 
 .container {
+    margin-top: 70px;
     background: white;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
     padding: 20px;
+    width: 90%;
+    max-width: 500px; 
 }
 
 input {
     padding: 10px;
     margin-right: 10px;
     border-radius: 5px;
+    width: calc(70% - 10px); 
 }
 
 button {
@@ -27,13 +31,10 @@ button {
 
 .weather-info {
     margin-top: 20px;
-    margin-left: 33vh;
     border: 2px solid;
     border-radius: 5px;
-    width: 250px;
+    width: 95%; 
+    padding: 10px; 
 }
 
-#now {
 
-    margin-right: 450px;
-}
