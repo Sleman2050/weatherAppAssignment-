@@ -12,8 +12,9 @@ function searchWithXHR() {
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let responseObj = JSON.parse(xhr.responseText);
-            highTemp.innerText = `High: ${responseObj.current.temp_c}C`;
-            lowTemp.innerText = `Low: ${responseObj.current.feelslike_c}C`;
+            
+            highTemp.innerText = `High: ${responseObj.current.feelslike_c}C`;
+            lowTemp.innerText = `Low: ${responseObj.current.temp_c}C`;
             wind.innerText = `Wind Speed: ${responseObj.current.wind_kph} k/h`;
 
         }
@@ -38,8 +39,8 @@ function searchWithFetch() {
             return response.json();
         })
         .then(data => {
-            highTemp.innerText = `High: ${data.current.temp_c}°C`;
-            lowTemp.innerText = `Low: ${data.current.feelslike_c}°C`;
+            highTemp.innerText = `High: ${responseObj.current.feelslike_c}C`;
+            lowTemp.innerText = `Low: ${responseObj.current.temp_c}C`;
             wind.innerText = `Wind Speed: ${data.current.wind_kph} kph`;
 
         })
@@ -57,8 +58,8 @@ async function searchWithFetchAwAs() {
     let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
 
     let data = await response.json();
-    highTemp.innerText = `High: ${data.current.temp_c}°C`;
-    lowTemp.innerText = `Low: ${data.current.feelslike_c}°C`;
+    highTemp.innerText = `High: ${responseObj.current.feelslike_c}C`;
+    lowTemp.innerText = `Low: ${responseObj.current.temp_c}C`;
     wind.innerText = `Wind Speed: ${data.current.wind_kph} kph`;
 
 }
@@ -68,5 +69,3 @@ async function searchWithFetchAwAs() {
 document.getElementById("getWeatherXHR").addEventListener("click", searchWithXHR);
 document.getElementById("getWeatherFetch").addEventListener("click", searchWithFetch);
 document.getElementById("getWeatherAsyncAwait").addEventListener("click", searchWithFetchAwAs);
-
-
